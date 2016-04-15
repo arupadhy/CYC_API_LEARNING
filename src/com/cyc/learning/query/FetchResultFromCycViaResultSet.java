@@ -39,6 +39,8 @@ public class FetchResultFromCycViaResultSet {
 		for(int i=0;rs.next()&&i<=10;i++) {
 			Map<String, String> variableAndBindingMap = new HashMap<>();
 			for(String variable: rs.getColumnNames()) {
+				//This is null for some reason?
+				//System.out.println(rs.getInferenceIdentifier().getInferenceId());
 				Object testObj = rs.getObject(variable, Object.class);
 				variableAndBindingMap.put(variable, testObj.toString());
 				System.out.println(String.format("Got variable and binding for %s answer %s : %s", i,variableAndBindingMap.keySet(),variableAndBindingMap.values()));
