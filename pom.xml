@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>CycErrorSampleProject</groupId>
+	<artifactId>CycErrorSampleProject</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Sample project to troubleshoot cyc error</name>
+	<description>Sample project to get help from cyc folks</description>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<!-- Core API specification -->
+			<groupId>com.cyc</groupId>
+			<artifactId>cyc-core-api</artifactId>
+			<version>1.0.0-rc5</version>
+		</dependency>
+		<dependency>
+			<!-- Reference implementation for the Core API -->
+			<groupId>com.cyc</groupId>
+			<artifactId>cyc-core-client-impl</artifactId>
+			<version>1.0.0-rc5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.16</version>
+		</dependency>
+	</dependencies>
+</project>
